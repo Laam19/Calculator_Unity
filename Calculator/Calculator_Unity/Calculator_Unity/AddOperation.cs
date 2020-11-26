@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-    class AddOperation : Operation
+    class AddOperation : IOperation
     {
         public int numberA { get; set; }
         public int numberB { get; set; }
-        public virtual int getResult()
+        public  int getResult()
         {
-            Console.WriteLine("Add");
+            
             int result = 0;
             result = this.numberA + this.numberB;
             return result;

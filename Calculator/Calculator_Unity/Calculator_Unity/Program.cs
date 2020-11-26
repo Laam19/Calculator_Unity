@@ -6,7 +6,7 @@ namespace Calculator_Unity
     {
         static void Main(string[] args)
         {
-            Operation op;
+            IOperation op;
             op = OperationFactory.getResult("*");
             op.numberA = (2);
             op.numberB  = (3);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-    class MultiOperation:Operation
+    class MultiOperation:IOperation
     {
         public int numberA { get; set; }
         public int numberB { get; set; }

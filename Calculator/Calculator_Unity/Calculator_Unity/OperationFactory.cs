@@ -6,10 +6,10 @@ namespace Calculator_Unity
 {
      public class OperationFactory
     {
-        public static Operation getResult(string ope)
+        public static IOperation getResult(string ope)
         {
             
-            Operation op = null;
+            IOperation op = null;
             
              switch(ope)
             {

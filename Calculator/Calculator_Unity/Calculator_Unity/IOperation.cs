@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-     public interface Operation
+     public interface IOperation
     {
         //public int numberA;
         //public int numberB;
