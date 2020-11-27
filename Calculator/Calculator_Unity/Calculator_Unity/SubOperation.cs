@@ -4,14 +4,13 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-     public class SubOperation:IOperation
+     public class SubOperation<T>:IOperation<T>
     {
-        public int numberA { get; set; }
-        public int numberB { get; set; }
-        public int getResult()
+        public T numberA { get; set; }
+        public T numberB { get; set; }
+        public T getResult()
         {
-            int result = 0;
-            result = numberA - numberB;
+            T result = (dynamic)numberA - (dynamic)numberB;
             return result;
         }
     }

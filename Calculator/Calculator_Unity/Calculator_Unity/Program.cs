@@ -6,12 +6,12 @@ namespace Calculator_Unity
     {
         static void Main(string[] args)
         {
-            IOperation op;
-            op = OperationFactory.getResult("*");
-            op.numberA = (2);
-            op.numberB  = (3);
-            int result = op.getResult();
+            var op = OperationFactory<int>.getResult("+");
+            op.numberA= 2;
+            op.numberB  = 3;
+            var result = op.getResult();
             Console.WriteLine(result);
         }
     }
+
 }

@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-    class AddOperation : IOperation
+    class AddOperation<T> : IOperation<T>
     {
-        public int numberA { get; set; }
-        public int numberB { get; set; }
-        public  int getResult()
+        public T numberA { get; set; }
+        public T numberB { get; set; }
+        public  T getResult()
         {
             
-            int result = 0;
-            result = this.numberA + this.numberB;
+            T result = (dynamic)numberA+(dynamic)numberB;
+           // result = this.numberA + this.numberB;
             return result;
         }
     }
