@@ -4,24 +4,15 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-    class DivOperation : IOperation
+    class DivOperation<T> : IOperation<T>
     {
-        public int numberA { get; set; }
-        public int numberB { get; set; }
-        public int getResult()
+        public T numberA { get; set; }
+        public T numberB { get; set; }
+        public T getResult()
         {
-            int result = 0;
-            if (numberB != 0)
-            {
-                result = numberA / numberB;
-                return result;
-            }
+            T result = (dynamic)numberA/(dynamic)numberB;
+            return result;
             
-            else
-            {
-                Console.WriteLine("Number B can not be 0");
-            }
-            return 0;
         }
     }
 }

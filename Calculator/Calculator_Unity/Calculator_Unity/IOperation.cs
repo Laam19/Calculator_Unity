@@ -4,12 +4,11 @@ using System.Text;
 
 namespace Calculator_Unity
 {
-     public interface IOperation
+     public interface IOperation<T>
     {
-        //public int numberA;
-        //public int numberB;
-        public int numberA { get; set; }
-        public int numberB { get; set; }
-        public int getResult();
+
+        public T numberA { get; set; }
+        public T numberB { get; set; }
+        public T getResult();
     }
 }

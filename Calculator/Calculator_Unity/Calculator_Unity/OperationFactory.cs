@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Calculator_Unity
+﻿namespace Calculator_Unity
 {
-     public class OperationFactory
+     public class OperationFactory<T>
     {
-        public static IOperation getResult(string ope)
+       
+
+        public static IOperation<T> getResult(string ope)
         {
             
-            IOperation op = null;
+            IOperation<T> op = null;
             
              switch(ope)
             {
                 case "+":
-                    op = new AddOperation();
+                    op=new AddOperation<T>();
                     break;
                 case "-":
-                    op = new SubOperation();
+                    op=new SubOperation<T>();
                     break;
                 case "*":
-                    op = new MultiOperation();
+                    op=new MultiOperation<T>();
                     break;
                 case "/":
-                    op = new DivOperation();
+                     op=new DivOperation<T>();
                     break;
             }
-
             return op;
+            
         }
+
+        
     }
 }
